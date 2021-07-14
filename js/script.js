@@ -5,6 +5,6 @@
 //const answer = prompt ("do tou like sass?", "sas is my life"); //вопрос с текстовым ответом от пользователя
 //console.log(answer);
 
-const username = "Sanya";
+const username = "Sanyaa";
 alert(`Hello, ${username}`);// ${ } - интерполяция вместо конкатенации 
 
