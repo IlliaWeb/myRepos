@@ -6,5 +6,6 @@
 //console.log(answer);
 
 const username = "Sanya";
-alert(`Hello, ${username}`);// ${ } - интерполяция вместо конкатенации 
+alert(`Hello,user ${username}`);// ${ } - интерполяция вместо конкатенации 
+prompt("you are like sas ?"," yes!!!");
 
