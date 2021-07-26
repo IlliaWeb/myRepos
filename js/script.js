@@ -8,8 +8,17 @@
 //const username = "Sanya";
 //alert(`Hello,user ${username}`);// ${ } - интерполяция вместо конкатенации 
 
+let numberOfFilms ;
 
-const numberOfFilms = +prompt('сколько фильмов вы уже посмотрели?','');
+function start () {
+ numberOfFilms = +prompt('сколько фильмов вы уже посмотрели?','');
+
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = +prompt('сколько фильмов вы уже посмотрели?','');
+    }
+}
+
+start();// ф-я задающая вопрос про кол-во просмотреных фильмов
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -18,14 +27,54 @@ const personalMovieDB = {
     genres: [],
     privat: false
 };
+ 
+for (let i = 0; i < 2; i++) {
+    let a = prompt('Один из последних просмотренных фильмов?', ''),
+        b = prompt('На сколько оцените его?', '');
+      
+    if (a != '' && b != '' && a != null && b != null && a.length < 50 ) {
+        personalMovieDB.movies[a] = b; 
+    } else {
+        i--;
+    }
+}
+/*
+let z = 0;
+while (z<2) {
+    let a = prompt('Один из последних просмотренных фильмов?', ''),
+        b = prompt('На сколько оцените его?', '');
+      
+    if (a != '' && b != '' && a != null && b != null && a.length < 50 ) {
+        personalMovieDB.movies[a] = b; 
+    } else {
+        z--;
+    }
+    z++;
+}
 
-const a = prompt('какой фильм вы смотрели последним?',''),
-      b = prompt('во сколько балов оцените фильм (1-10)?',''),
-      c = prompt('какой фильм вы смотрели последним?',''),
-      d = prompt('во сколько балов оцените фильм (1-10)?','');
-    
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+do {
+    let a = prompt('Один из последних просмотренных фильмов?', ''),
+        b = prompt('На сколько оцените его?', '');
+  
+if (a != '' && b != '' && a != null && b != null && a.length < 50 ) {
+    personalMovieDB.movies[a] = b; 
+} else {
+    z--;
+}
+z++;
+
+} while (z<2);
+*/    
+
+if (personalMovieDB.count <=10) {
+    console.log("просмотрено довольном мало фильмов");
+} else if ( personalMovieDB.count > 10  &&  personalMovieDB.count <= 30 ) {
+    console.log ("Вы классический зритель");
+} else if (personalMovieDB.count > 30 ){
+    console.log ("Вы киноман");
+} else {
+    console.log("ошибка");
+}
 
 console.log(personalMovieDB); 
 
