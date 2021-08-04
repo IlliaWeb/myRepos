@@ -35,7 +35,6 @@ rememberMyFilms();//записывает и проверяет данные пр
 
 function writeYourGenres() { //записывает жанры пользователя
     for (let i = 1; i <=3 ; i++) {
-        
         personalMovieDB.genres[i-1] = prompt(`Ваш любимый жанр под номером ${i}`);// i-1 потому что запись в массиве начинаеться с 0 
     }
 }
@@ -53,12 +52,6 @@ function detectPersonalLevel() {
     }
 }
 detectPersonalLevel();//оценивает уровень насмотренности 
-/*
-function showMyDB() { //показывает данные из обьекта в зависимости от значения приватности
-    if (personalMovieDB.privat== false) {
-       console.log(personalMovieDB); 
-    } 
-}*/
 
 function showMyDB(hidden) {//показывает данные из обьекта в зависимости от значения приватности
     if (!hidden) {
