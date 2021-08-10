@@ -68,6 +68,7 @@ console.log(` index - ${i}, element ${item}, in array ${arr}`);
 */
 
 ///////////////////// ПЕРЕДАЧА данных, копирование
+/*
 function copy(mainObj) { // копирование обьекта
     let objCopy = {};
 
@@ -105,8 +106,6 @@ const culture = [...books, ...films, 'merlin menson', 'michel jackson'];
 console.log(culture); //пример работы спреад оператора
 
 
-
-
 function show (a, b, c, d, e, z) { // разбили массив на елементы и передали в ф-ю
     console.log(a);
     console.log(b);
@@ -121,3 +120,27 @@ show(...retard);
 const sas =['a', 3,'y'];//копируем массив через спреад оператор
 const newsas = [...sas];
 console.log(newsas);
+*/
+////////// OOP
+/*
+const solder = {
+    health: 400,
+    armor: 100,
+    sayHello: function() {
+    console.log("Hello solders!");
+    }
+};
+
+const john = {
+    health: 100
+};
+
+Object.setPrototypeOf(john,solder); //установили что джон прототип солдата
+console.log(john.armor);
+
+
+const fighter = Object.create(solder);
+fighter.sayHello();
+console.log(fighter.health);
+*/
+/////////////
